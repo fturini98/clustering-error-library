@@ -1,0 +1,34 @@
+\section{Binding energy based clustering}
+
+
+
+\subsection{Clustering Problematics in physics studies}
+In physics studies, the mean of the measure is usually associated with its error. This additional information is not used in standard clustering algorithms like k-means, fuzzy C-means, or DBSCAN. In general, we want that more 'precise' is a measure more important is that measure in the clustering process. S
+
+\subsection{Basic Priciples}
+
+\begin{equation*}
+    mass=\frac{\min(error)}{error}
+\end{equation*}
+
+\begin{equation*}
+    Parallax \stackrel{[\frac{1}{\text{errParallax}}]}{\rightarrow} Parallax
+\end{equation*}
+
+\begin{equation*}
+    \phi_{ij}=\frac{mass_j}{r_{ij}}
+\end{equation*}
+
+\subsubsection{Distances normalization}
+If we want use different feature of a dataset, we must think how to define a distance between the different data points. For example if a data point
+is defined by two variables $X\, [a,b]$ and $Y \, [c,d]$, if we have $a,b\gg c,d$ whene we go to calculate the distance between two points the feature $Y$
+dosen't affect much the distance, so is like we don't use the information inside $Y$.
+
+For avoiding that is usefull to normailze the data before to calculate the distances. A good practice is to have a zero-mean distribution with a 
+unitary standard deviation even if we loss information about the dispersion of the data distribution. At the end the normalization choosen is:
+\begin{align}
+    \label{eq:normalization}
+    X_i&=\frac{X_i-\bar X_i}{\sigma_{X_i}}\\
+    \sigma_{X_i}&=\sqrt{E[(X_i-\bar X_i)^2]}=\sqrt{\frac{1}{len(X_i)}\sum_j (X_{i,j}-\bar X_i)^2}
+\end{align}
+where the index $i$ mean the feature.

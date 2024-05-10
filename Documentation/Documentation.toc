@@ -1,0 +1,5 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Binding energy based clustering}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Clustering Problematics in physics studies}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Basic Priciples}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Distances normalization}{2}{}%

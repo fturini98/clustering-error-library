@@ -11,6 +11,10 @@ setup(
     license='GNU General Public License (GPL)',
     packages=find_packages(),
     install_requires=[
+        'numpy',
+        'json',
+        'pandas',
+        'scipy',
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
