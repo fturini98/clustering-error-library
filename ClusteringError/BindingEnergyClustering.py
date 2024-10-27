@@ -227,7 +227,7 @@ class Clusters:
 
                 self.min_errors[index]=np.float64(mean_min_distances/self.S)
      
-    ############################### Parent#################################                   
+################################### Parent#################################                   
     def find_single_parent(self,distance_matrix,index):
         if index==self.root_index:
             return self.root_index
@@ -308,8 +308,7 @@ class Clusters:
         
         # Calcolo dei conteggi per ogni etichetta di cluster
         unique_labels, counts = np.unique(self.cluster_ids, return_counts=True)
-        #print('Prima mappatura',unique_labels, counts)
-        #self.cluster_ids_non_mappato=self.cluster_ids
+
         
         # Ordino i cluster in ordine decrescente di popolosità (escluso il cluster 0)
         index_most_popolous_clusters = np.argsort(counts[unique_labels != 0])[::-1]
@@ -404,7 +403,7 @@ class Clusters:
             print(f"Cluster {label}: {count} elementi")
     
         return iteration_points_label
-
+##################### funzioni aggiuntive ##########################
     def calculate_wcss(self):
         #print('ci entro')
         # Filtrare i punti che non appartengono al cluster con id 0
